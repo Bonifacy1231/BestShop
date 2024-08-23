@@ -1,0 +1,102 @@
+@use "/src/scss/settings/index" as *;
+@use "../generic/reset" as *;
+
+.statistics {
+	margin-top: 10rem;
+
+	@include mobile {
+		margin-top: 5rem;
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__container {
+		max-width: 80rem;
+		margin: 10rem auto 12rem;
+		display: flex;
+		justify-content: space-between;
+
+		@include mobile {
+			margin: 3.5rem auto 5rem;
+			align-items: center;
+			flex-direction: column;
+		}
+	}
+
+	&__single {
+		max-width: 16rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		text-align: center;
+		font-family: $fontRaleway;
+		font-size: 1.6rem;
+
+		@include mobile {
+			margin-bottom: 3.5rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&:nth-child(1) {
+			.statistics__circle {
+				background-color: $colorRedish;
+			}
+
+			.statistics__img {
+				top: 0;
+				left: 45%;
+			}
+		}
+
+		&:nth-child(2) {
+			.statistics__circle {
+				background-color: $colorPrimary;
+			}
+
+			.statistics__img {
+				top: 14px;
+				left: 45%;
+			}
+		}
+
+		&:nth-child(3) {
+			.statistics__circle {
+				background-color: $colorGreen;
+			}
+
+			.statistics__img {
+				top: 6px;
+				left: 50%;
+			}
+		}
+	}
+
+	&__circle {
+		border-radius: 50%;
+		width: 6.3rem;
+		height: 6.3rem;
+		position: relative;
+	}
+
+	&__img {
+		position: absolute;
+	}
+
+	&__number {
+		font-size: 2rem;
+		font-weight: 800;
+		letter-spacing: 0.3rem;
+		margin-top: 1.3rem;
+	}
+
+	&__description {
+		color: $colorGrey;
+		margin-top: 1.9rem;
+	}
+}

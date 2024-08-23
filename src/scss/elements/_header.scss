@@ -1,0 +1,125 @@
+@use "/src/scss/settings/index" as *;
+@use "../generic/reset" as *;
+.header {
+	height: 7rem;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+
+		.logo {
+			font-size: 3.2rem;
+			font-weight: 300;
+			font-family: $fontRaleway;
+			color: $colorPrimary;
+			&:hover {
+				text-shadow: 3px 3px 3px $colorPrimaryShadow;
+			}
+		}
+	}
+
+	.nav {
+		&__element {
+			padding: 0 2.6rem;
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+
+		&__link {
+			font-size: 1.1rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 2.8rem 1.8rem 2.4rem;
+			border-bottom: 4px solid transparent;
+			letter-spacing: 0.328rem;
+			color: $colorGrey;
+
+			&:hover {
+				color: $colorBlack;
+				border-color: $colorPrimary;
+			}
+		}
+	}
+
+	&__nav {
+		display: flex;
+
+		@include mobile {
+			position: absolute;
+			left: 0;
+			top: 95px;
+			flex-direction: column;
+			background-color: white;
+			width: 100%;
+			padding-bottom: 2rem;
+			display: none;
+
+			.nav__element {
+				padding: 0;
+			}
+
+			.nav__link {
+				display: block;
+				padding: 1.4rem 2rem;
+			}
+		}
+	}
+
+	.menu {
+		&__btn {
+			display: none;
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+			opacity: 0;
+
+			@include mobile {
+				&:checked {
+					~ .header__nav {
+						display: flex;
+					}
+
+					~ .menu__toggle {
+						span {
+							&:nth-child(1) {
+								transform: rotate(45deg) translate(2px, 5px);
+							}
+							&:nth-child(2) {
+								opacity: 0;
+							}
+							&:nth-child(3) {
+								transform: rotate(-45deg) translate(2px, -5px);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&__toggle {
+			display: none;
+
+			span {
+				width: 2rem;
+				height: 0.2rem;
+				display: block;
+				margin-bottom: 0.3rem;
+				background-color: $colorPrimary;
+				transition: 0.3s all ease-in-out;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			@include mobile {
+				display: block;
+			}
+		}
+	}
+}

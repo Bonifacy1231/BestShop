@@ -1,0 +1,33 @@
+@use "/src/scss/settings/index" as *;
+@use "../generic/reset" as *;
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $fontOpenSans;
+}
+
+a {
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 3.6rem;
+	font-family: $fontRaleway;
+}
+
+.container {
+	width: 1352px;
+	margin: 0 auto;
+
+	@include notebook {
+		width: 100%;
+		padding: 0 1.5rem;
+	}
+}

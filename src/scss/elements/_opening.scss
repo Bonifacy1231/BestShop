@@ -1,0 +1,50 @@
+@use "/src/scss/settings/index" as *;
+@use "../generic/reset" as *;
+.opening {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+
+	&__content {
+		margin-top: 13rem;
+		text-align: center;
+
+		@include mobile {
+			margin-top: 10rem;
+		}
+	}
+
+	&__header {
+		font-size: 4.9rem;
+		font-family: $fontRaleway;
+	}
+
+	&__heading {
+		font-size: 1.6rem;
+		margin-top: 2rem;
+		margin-bottom: 3.9rem;
+
+		@include mobile {
+			padding: 0 7rem;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: auto;
+
+		@include mobile {
+			width: 220%;
+			transform: translateX(-28%);
+		}
+	}
+
+	@include mobile {
+		.btn {
+			display: block;
+			margin: 0 1.5rem;
+			padding: 1.6rem 0;
+		}
+	}
+}

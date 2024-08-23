@@ -1,0 +1,90 @@
+@use "/src/scss/settings/index" as *;
+@use "../generic/reset" as *;
+.form {
+	display: flex;
+	flex-direction: column;
+
+	@include tablet {
+		margin-top: 2rem;
+	}
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+
+		&:first-of-type {
+			margin-bottom: 4.2rem;
+		}
+	}
+
+	&__label {
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $colorPrimary;
+		line-height: 1.4rem;
+		letter-spacing: 0.328rem;
+		font-size: 1.1rem;
+	}
+
+	&__input {
+		border: none;
+		border-bottom: 1px solid $colorGrey;
+		background-color: transparent;
+		line-height: 2.625rem;
+	}
+
+	&__consent {
+		margin-top: 3rem;
+	}
+
+	&__checkbox {
+		display: block;
+		position: relative;
+		padding-left: 3.5rem;
+		margin-bottom: 1.2rem;
+		cursor: pointer;
+		font-size: 2.2rem;
+
+		input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+
+			&:checked {
+				~ .checkbox {
+					background-image: url(../assets/Checkmark.svg);
+					background-position: center;
+					background-size: 50%;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+
+		.checkbox {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 2.5rem;
+			width: 2.5rem;
+			background-color: $colorWhite;
+			border: 1px solid $colorGrey;
+			border-radius: 0.4rem;
+		}
+
+		.consent__text {
+			margin: 0 1rem;
+			font-size: 1.2rem;
+			color: $colorGrey;
+			line-height: 1.7rem;
+		}
+	}
+
+	.btn {
+		font-size: 1.3rem;
+		padding: 1.9rem 9.5rem;
+		align-self: flex-end;
+		margin-top: 2rem;
+	}
+}

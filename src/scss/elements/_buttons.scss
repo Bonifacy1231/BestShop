@@ -1,0 +1,29 @@
+@use "/src/scss/settings/index" as *;
+@use "../generic/reset" as *;
+.btn {
+	display: inline-block;
+	padding: 1.8rem 7rem;
+	font-size: 1.6rem;
+	color: white;
+	font-weight: bold;
+	border-radius: $buttonRadius;
+	border: none;
+
+	&--primary {
+		background-color: $colorPrimary;
+		border-radius: $buttonRadius;
+		box-shadow: 3px 10px 14px $colorPrimaryShadow;
+	}
+
+	&--redish {
+		background-color: $colorRedish;
+	}
+
+	&--green {
+		background-color: $colorGreen;
+	}
+
+	&--large {
+		padding: 2.2rem 20rem;
+	}
+}
