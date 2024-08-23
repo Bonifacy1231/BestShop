@@ -1,7 +1,7 @@
 # BestShop
 
 ## Demo
-
+* link: https://best-shop-bonifacy1231.netlify.app
 ## Website description
 The BestShop website offers online store management services and also provides software for them.
 ## Technical description of the website
