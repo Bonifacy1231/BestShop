@@ -1,9 +1,13 @@
 # BestShop
 
 ## Demo
-* link: https://best-shop-bonifacy1231.netlify.app
+
+- link: https://best-shop-bonifacy1231.netlify.app
+
 ## Website description
+
 The BestShop website offers online store management services and also provides software for them.
+
 ## Technical description of the website
 
 The BestShop website was designed as a single-page site. The BestShop site is responsive and allows it to be opened in different windows. The BestShop site also has a dynamic calculator for pricing a specific package.
@@ -21,6 +25,9 @@ The BestShop website was designed as a single-page site. The BestShop site is re
 
 - Install dependencies in the project
   `npm install`
+  
+- Install Scss in the project
+  `npm install -D sass`
 
 * Launch the project
   `npm run dev`
