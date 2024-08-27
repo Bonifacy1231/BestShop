@@ -2,7 +2,7 @@
 
 ## Demo
 
-- link: https://best-shop-bonifacy1231.netlify.app
+- link: [https://best-shop-bonifacy1231.netlify.app](https://bestshop-bonifacy1231.netlify.app/)
 
 ## Website description
 
